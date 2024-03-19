@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<link rel="stylesheet" href="assets/css/styles.css">
+<link rel="stylesheet" href="assets/css/background.css">
+<style>
+    body {
+        margin: 0;
+        padding: 0;
+        background-color: #f5f5f5;
+        overflow: hidden;
+        text-align: center;
+    }
+
+    header {
+        color: #fff;
+        text-align: left;
+
+        padding: 2rem;
+        margin: 2rem;
+    }
+
+    main {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: nowrap;
+        justify-content: space-evenly;
+        align-items: center;
+        height: 100vh;
+        overflow: auto;
+    }
+
+    section {
+        color: #fff;
+        padding: 1rem 2rem;
+    }
+
+    footer {
+        color: #fff;
+        text-align: center;
+
+        padding: 2rem;
+        margin: 2rem;
+    }
+
+    h1 {
+        font-size: 3rem;
+        margin-bottom: 0.5rem;
+    }
+
+    header p {
+        font-size: 1.2rem;
+        font-weight: 400;
+    }
+
+    body {
+        background: radial-gradient(circle at 50% 50%,
+                #ff9d9d,
+                #ff8a8a,
+                #ff7777,
+                #ff6464,
+                #ff5151,
+                #6680ff,
+                #4d66ff,
+                #334dff,
+                #1a33ff);
+        background-size: 1200% 1200%;
+        animation: swirlingGradient 60s ease infinite;
+        height: 100vh;
+    }
+
+    @keyframes swirlingGradient {
+        0% {
+            background-position: 0% 50%;
+            background-size: 1200% 1200%;
+            border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;
+        }
+
+        25% {
+            background-position: 50% 100%;
+            background-size: 1000% 1000%;
+            border-radius: 70% 30% 30% 70% / 70% 70% 30% 30%;
+        }
+
+        50% {
+            background-position: 100% 50%;
+            background-size: 800% 800%;
+            border-radius: 50% 50% 50% 50% / 50% 50% 50% 50%;
+        }
+
+        75% {
+            background-position: 50% 0%;
+            background-size: 1000% 1000%;
+            border-radius: 30% 70% 70% 30% / 70% 30% 30% 70%;
+        }
+
+        100% {
+            background-position: 0% 50%;
+            background-size: 1200% 1200%;
+            border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;
+        }
+    }
+
+    body::before {
+        content: "";
+        position: absolute;
+        top: -20%;
+        left: -20%;
+        width: 100%;
+        height: 100%;
+        background: radial-gradient(circle at 50% 50%,
+                rgba(255, 255, 255, 0.4),
+                rgba(255, 255, 255, 0.2),
+                rgba(255, 255, 255, 0.1),
+                rgba(255, 255, 255, 0));
+        animation: swirlingBlob 30s ease-in-out infinite;
+    }
+
+    @keyframes swirlingBlob {
+        0% {
+            transform: translate(0, 0) rotate(0deg) scale(1);
+            border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;
+        }
+
+        25% {
+            transform: translate(50%, -30%) rotate(90deg) scale(1.2);
+            border-radius: 70% 30% 30% 70% / 70% 70% 30% 30%;
+        }
+
+        50% {
+            transform: translate(20%, 60%) rotate(180deg) scale(0.9);
+            border-radius: 50% 50% 50% 50% / 50% 50% 50% 50%;
+        }
+
+        75% {
+            transform: translate(-40%, 20%) rotate(270deg) scale(1.1);
+            border-radius: 30% 70% 70% 30% / 70% 30% 30% 70%;
+        }
+
+        100% {
+            transform: translate(0, 0) rotate(360deg) scale(1);
+            border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;
+        }
+    }
+</style>
+<html>
+
+<head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic&display=swap" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Josh Melander - Software Engineer, Builder, Entrepreneur</title>
+</head>
+
+<body>
+    <main>
+        <section>
+
+            <h1>Josh Melander</h1>
+            <p>Software Engineer | Builder | Entrepreneur</p>
+        </section>
+        <section>
+            <h2>About Me</h2>
+            <p>
+                I am people focused and business minded engineering leader.
+            </p>
+            <p>
+                People, organization, processes, and culture are what make great products (repeatedly).
+            </p>
+        </section>
+        <section>
+            <h2>Experience</h2>
+            <p>Cloud native architecture</p>
+            <p>Geo-spatial applications</p>
+            <p>Web applications</p>
+            <p>Developer Operations</p>
+        </section>
+        <footer>
+            <p>Contact me at joshmelander at gmail dot com</p>
+        </footer>
+    </main>
+</body>
+
+</html>
