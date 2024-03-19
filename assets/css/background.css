@@ -1,0 +1,89 @@
+body {
+    background: radial-gradient(circle at 50% 50%,
+            #ff9d9d,
+            #ff8a8a,
+            #ff7777,
+            #ff6464,
+            #ff5151,
+            #6680ff,
+            #4d66ff,
+            #334dff,
+            #1a33ff);
+    background-size: 1200% 1200%;
+    animation: swirlingGradient 60s ease infinite;
+    height: 100vh;
+}
+
+@keyframes swirlingGradient {
+    0% {
+        background-position: 0% 50%;
+        background-size: 1200% 1200%;
+        border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;
+    }
+
+    25% {
+        background-position: 50% 100%;
+        background-size: 1000% 1000%;
+        border-radius: 70% 30% 30% 70% / 70% 70% 30% 30%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+        background-size: 800% 800%;
+        border-radius: 50% 50% 50% 50% / 50% 50% 50% 50%;
+    }
+
+    75% {
+        background-position: 50% 0%;
+        background-size: 1000% 1000%;
+        border-radius: 30% 70% 70% 30% / 70% 30% 30% 70%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+        background-size: 1200% 1200%;
+        border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;
+    }
+}
+
+body::before {
+    content: "";
+    position: absolute;
+    top: -20%;
+    left: -20%;
+    width: 140%;
+    height: 140%;
+    background: radial-gradient(circle at 50% 50%,
+            rgba(255, 255, 255, 0.4),
+            rgba(255, 255, 255, 0.2),
+            rgba(255, 255, 255, 0.1),
+            rgba(255, 255, 255, 0));
+    animation: swirlingBlob 30s ease-in-out infinite;
+}
+
+@keyframes swirlingBlob {
+    0% {
+        transform: translate(0, 0) rotate(0deg) scale(1);
+        border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;
+    }
+
+    25% {
+        transform: translate(50%, -30%) rotate(90deg) scale(1.2);
+        border-radius: 70% 30% 30% 70% / 70% 70% 30% 30%;
+    }
+
+    50% {
+        transform: translate(20%, 60%) rotate(180deg) scale(0.9);
+        border-radius: 50% 50% 50% 50% / 50% 50% 50% 50%;
+    }
+
+    75% {
+        transform: translate(-40%, 20%) rotate(270deg) scale(1.1);
+        border-radius: 30% 70% 70% 30% / 70% 30% 30% 70%;
+    }
+
+    100% {
+        transform: translate(0, 0) rotate(360deg) scale(1);
+        border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;
+    }
+}
